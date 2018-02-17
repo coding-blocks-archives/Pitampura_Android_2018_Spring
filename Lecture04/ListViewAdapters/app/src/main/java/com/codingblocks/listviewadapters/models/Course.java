@@ -39,8 +39,8 @@ public class Course {
 
     public static ArrayList<Course> genRandomCourses (int size) {
         ArrayList<Course> courses = new ArrayList<>();
+        Random r = new Random();
         for (int i = 0; i < size; i++) {
-            Random r = new Random();
             courses.add(new Course(
                     COURSES[r.nextInt(8)],
                     TEACHERS[r.nextInt(8)],
