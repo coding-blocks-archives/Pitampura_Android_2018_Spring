@@ -41,12 +41,29 @@ public class CourseListAdapter extends BaseAdapter {
     }
 
     @Override
+    public int getViewTypeCount() {
+        return 2;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (getItem(position).getLectures() > 15)
+            return 1;
+        else
+            return 0;
+    }
+
+    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Log.d(TAG, "getView: " + "position = " + position + " convertView = " + convertView);
         CourseViewHolder holder;
         if (convertView == null) {
             LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = li.inflate(R.layout.list_item_course, parent, false);
+            if (getItemViewType(position) == 0) {
+                convertView = li.inflate(R.layout.list_item_course, parent, false);
+            } else {
+                convertView = li.inflate(R.layout.list_item_course_right, parent, false);
+            }
             holder = new CourseViewHolder(convertView);
             convertView.setTag(holder);
         } else {
