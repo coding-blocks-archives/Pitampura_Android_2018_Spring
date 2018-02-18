@@ -26,8 +26,18 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
     public CourseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View itemView = li.inflate(R.layout.list_item_course, parent, false);
+        View itemView;
+        if (viewType == 0) {
+            itemView = li.inflate(R.layout.list_item_course, parent, false);
+        } else {
+            itemView = li.inflate(R.layout.list_item_course_right, parent, false);
+        }
         return new CourseViewHolder(itemView);
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position % 2;
     }
 
     @Override
