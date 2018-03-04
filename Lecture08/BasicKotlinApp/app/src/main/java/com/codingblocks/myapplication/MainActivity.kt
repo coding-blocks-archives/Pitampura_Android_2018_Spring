@@ -13,9 +13,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        fun a() = etVar1.text.toString().toInt()
+        fun b() = etVar2.text.toString().toInt()
+        val p = { etVar1.text.toString().toInt() }
+        val q = { etVar2.text.toString().toInt() }
+
         btnAdd.setOnClickListener{
-            tvResult.text = (etVar1.text.toString().toInt()
-                            + etVar2.text.toString().toInt()).toString()
+            tvResult.text = ( p() + q() ).toString()
         }
     }
 }
+
+//operator fun (() -> Int).plus(X: () -> Int): Int { return this() + X() }
+

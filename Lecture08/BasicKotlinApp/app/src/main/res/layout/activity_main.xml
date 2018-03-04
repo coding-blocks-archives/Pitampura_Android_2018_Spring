@@ -13,13 +13,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <EditText
+            android:hint="Num 1"
             android:id="@+id/etVar1"
             android:ems="5"
+            android:inputType="number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <EditText
+            android:hint="Num 2"
             android:id="@+id/etVar2"
             android:ems="5"
+            android:inputType="number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
