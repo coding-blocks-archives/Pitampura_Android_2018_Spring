@@ -34,7 +34,7 @@ class UsersActivity : AppCompatActivity() {
             override fun onResponse(call: Call<Array<User>>?, response: Response<Array<User>>?) {
                 val l = response?.body()?.size
                 if (l != null) {
-                    Log.d(TAG, response.body()!!.get(0).name)
+                    Log.d(TAG, response.body()!![0].name)
                 }
             }
 
