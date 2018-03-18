@@ -44,7 +44,7 @@ fun main(args: Array<String>) {
         taste = "sour"
         println(cook())
     }
-    println(k.taste)
+    println(k.taste)q
 
     println(mango.hello())
 
