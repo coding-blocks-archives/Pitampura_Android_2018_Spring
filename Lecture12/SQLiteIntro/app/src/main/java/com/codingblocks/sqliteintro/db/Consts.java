@@ -7,6 +7,7 @@ public interface Consts {
     String LBR = " ( ";
     String COMMA = " , ";
     String SEMI = " ; ";
+    String DESC = " DESC ";
 
     String TYPE_INT = " INTEGER ";
     String TYPE_TEXT = " TEXT ";

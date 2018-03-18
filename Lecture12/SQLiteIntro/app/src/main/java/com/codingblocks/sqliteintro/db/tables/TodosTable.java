@@ -53,7 +53,7 @@ public class TodosTable {
                 PROJECTION_ALL,
                 null, null,
                 null, null,
-                null
+                Columns.ID + DESC
         );
         int idxId = c.getColumnIndex(Columns.ID);
         int idxTask = c.getColumnIndex(Columns.TASK);
