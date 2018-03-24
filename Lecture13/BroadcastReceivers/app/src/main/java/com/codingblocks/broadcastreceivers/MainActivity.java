@@ -25,10 +25,6 @@ public class MainActivity extends AppCompatActivity {
         powerEventFilter = new IntentFilter();
         powerEventFilter.addAction(Intent.ACTION_POWER_CONNECTED);
         powerEventFilter.addAction(Intent.ACTION_POWER_DISCONNECTED);
-
-
-
-
     }
 
     @Override
