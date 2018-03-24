@@ -7,15 +7,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <include
+    <!--<include-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--layout="@layout/partial_main_top" />-->
+    <!--<include-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--layout="@layout/partial_main_bottom" />-->
+    <fragment
+        android:id="@+id/fragTop"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        layout="@layout/partial_main_top" />
-    <include
+        android:name="com.codingblocks.fragments.TopFragment" />
+    <fragment
+        android:id="@+id/fragBottom"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        layout="@layout/partial_main_bottom" />
+        android:name="com.codingblocks.fragments.BottomFragment" />
+
 
 </LinearLayout>
