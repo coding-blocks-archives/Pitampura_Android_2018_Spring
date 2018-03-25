@@ -1,4 +1,4 @@
-package com.codingblocks.jsonapinavdrawer
+package com.codingblocks.jsonapinavdrawer.adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -9,7 +9,8 @@ import android.view.ViewGroup
 
 class ItemAdapter<I>(
         val itemList: ArrayList<I>,
-        val itemLayoutId: Int,
+//        val itemLayoutId: Int,
+        val createItemView: () -> View,
         val bindView: (itemView: View, item: I) -> Unit
 ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
@@ -20,7 +21,7 @@ class ItemAdapter<I>(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val li = parent.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = li.inflate(itemLayoutId, parent, false)
+        val view = createItemView()
         return ItemViewHolder(view)
 
     }
