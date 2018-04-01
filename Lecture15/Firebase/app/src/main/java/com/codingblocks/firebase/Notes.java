@@ -7,6 +7,9 @@ package com.codingblocks.firebase;
 public class Notes {
     private String title, description;
 
+    public Notes() {
+    }
+
     public Notes(String title, String description) {
         this.title = title;
         this.description = description;
