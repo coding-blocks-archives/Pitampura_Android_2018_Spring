@@ -17,14 +17,15 @@ class MainActivity : AppCompatActivity(), LocationListener {
     val TAG = "LOC"
     lateinit var locMan: LocationManager
 
-    override fun onLocationChanged(location: Location?) {
-        location?.let {
+    override fun onLocationChanged(location: Location) {
+        location.let {
             Log.d(TAG, """
                 latitude = ${it.latitude}
                 longitude = ${it.longitude}
                 altitude = ${it.altitude}
                 accuracy = ${it.accuracy}
             """.trimIndent())
+
 
         }
     }
@@ -73,6 +74,12 @@ class MainActivity : AppCompatActivity(), LocationListener {
 
                     locMan.requestLocationUpdates(
                             LocationManager.GPS_PROVIDER,
+                            30 * 1000,
+                            10F,
+                            this
+                    )
+                    locMan.requestLocationUpdates(
+                            LocationManager.NETWORK_PROVIDER,
                             30 * 1000,
                             10F,
                             this
