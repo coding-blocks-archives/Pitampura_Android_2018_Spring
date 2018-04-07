@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
 
     fun writeDataToFile () {
         val sdCard = Environment.getExternalStorageDirectory()
+        //val sdCard = getExternalFilesDir(null)
         val testFile = File(sdCard, "test.txt")
 
         testFile.writeText("HELLO WORLD")
@@ -61,8 +62,11 @@ class MainActivity : AppCompatActivity() {
                 && grantResults[1] == PackageManager.PERMISSION_GRANTED ) {
                 writeDataToFile()
             } else {
-                Toast.makeText(this, "UNABLE TO WRITE WITHOUT PERMISSION", Toast.LENGTH_SHORT)
-                        .show()
+                Toast.makeText(
+                        this,
+                        "UNABLE TO WRITE WITHOUT PERMISSION",
+                        Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
