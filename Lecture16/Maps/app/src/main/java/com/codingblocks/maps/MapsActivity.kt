@@ -46,6 +46,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.addMarker(MarkerOptions().position(cb).title("CB"))
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(cb, 14.toFloat()))
 
+        mMap.uiSettings.isZoomControlsEnabled = true
+        mMap.uiSettings.isTiltGesturesEnabled = true
+
         mMap.addCircle(
                 CircleOptions()
                         .center(cb)
