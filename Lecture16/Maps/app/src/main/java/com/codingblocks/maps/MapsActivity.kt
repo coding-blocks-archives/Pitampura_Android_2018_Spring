@@ -11,6 +11,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolylineOptions
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -56,6 +57,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                         .strokeColor(Color.rgb(0xfc, 0x4f, 0x4f))
                         .fillColor(Color.argb(90, 0xfc, 0x4f, 0x4f))
                         .strokeWidth(2.toFloat())
+        )
+
+        mMap.addPolyline(PolylineOptions()
+                .addAll(arrayListOf(
+                        LatLng(28.6969421,77.1423825),
+                        LatLng(29.6969421,77.1423825),
+                        LatLng(27.6969421,78.1423825),
+                        LatLng(28.6969421,79.1423825),
+                        LatLng(26.6969421,77.1423825),
+                        LatLng(26.6969421,78.1423825)
+                ))
+                .color(Color.BLUE)
+                .width(5.toFloat())
         )
 
     }
