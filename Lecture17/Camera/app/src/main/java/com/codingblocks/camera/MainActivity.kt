@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 holder?.surface?.let {
                     try {
                         cam.stopPreview()
-                    } catch (e: java.lang.Exception) {
+                    } catch (e: Exception) {
                         Log.e(TAG, "No preview to stop", e)
                     }
 
