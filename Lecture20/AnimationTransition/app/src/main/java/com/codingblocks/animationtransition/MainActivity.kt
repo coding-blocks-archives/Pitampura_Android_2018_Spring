@@ -4,6 +4,8 @@ import android.graphics.drawable.AnimationDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.romainpiel.titanic.library.Titanic
+import com.romainpiel.titanic.library.TitanicTextView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
             setBackgroundResource(R.drawable.ic_progress_rotate)
             (background as AnimationDrawable).start()
         }
+        Titanic().start(tvTitanic as TitanicTextView)
 
     }
 }
