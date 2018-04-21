@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:duration="100">
+        <rotate
+            android:drawable="@drawable/ic_rotate_clockwise"
+            android:fromDegrees="0"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="45" />
+    </item>
+    <item android:duration="100">
+        <rotate
+            android:drawable="@drawable/ic_rotate_clockwise"
+            android:fromDegrees="45"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="90" />
+    </item>
+    <item android:duration="100">
+        <rotate
+            android:drawable="@drawable/ic_rotate_clockwise"
+            android:fromDegrees="90"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="135" />
+    </item>
+    <item android:duration="100">
+        <rotate
+            android:drawable="@drawable/ic_rotate_clockwise"
+            android:fromDegrees="135"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="180" />
+    </item>
+    <item android:duration="100">
+        <rotate
+            android:drawable="@drawable/ic_rotate_clockwise"
+            android:fromDegrees="180"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="270" />
+    </item>
+    <item android:duration="100">
+        <rotate
+            android:drawable="@drawable/ic_rotate_clockwise"
+            android:fromDegrees="270"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="360" />
+    </item>
+
+
+</animation-list>

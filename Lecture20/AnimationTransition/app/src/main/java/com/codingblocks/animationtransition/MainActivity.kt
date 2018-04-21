@@ -1,5 +1,6 @@
 package com.codingblocks.animationtransition
 
+import android.graphics.drawable.AnimationDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,6 +19,11 @@ class MainActivity : AppCompatActivity() {
         llBackground.addView(MyButton(this).apply {
             text = "B"
         })
+
+        ivRotateProgress.apply {
+            setBackgroundResource(R.drawable.ic_progress_rotate)
+            (background as AnimationDrawable).start()
+        }
 
     }
 }
